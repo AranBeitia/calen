@@ -4,20 +4,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
   <script src="assets/js/main.js" defer></script>
   <title>Document</title>
-
 </head>
 <body>
-  <header>
-    <h1>My calen</h1>
-    <button>New event</button>
-  </header>
-  <main>
-    <h2>July - 2021</h2>
-    <p>my calen</p>
-    <article id="calendar">
+  <main class="main-container">
+    <header class="flex-center">
+      <h1 class="main-title">Biutiful calendar</h1>
+      <button>Add event</button>
+    </header>
+    <article>
+      <h2 class="secondary-title flex-between">
+        <span>July</span>
+        <span>2021</span>
+      </h2>
+      <button id="previous">Previous</button>
+      <button id="next">Next</button>
+      <section id="calendar" class="grid">
+      </section>
     </article>
   </main>
 </body>

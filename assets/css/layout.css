@@ -1,0 +1,11 @@
+.main-container {
+  outline: 1px solid red;
+  max-width: 60rem;
+  width: 100%;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
