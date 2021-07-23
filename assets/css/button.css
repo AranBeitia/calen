@@ -1,0 +1,16 @@
+.button {
+  max-width: 150px;
+  width: 100%;
+  height: fit-content;
+  padding: .5rem 1rem;
+  background-color: transparent;
+  border-radius: 20px;
+  border-color: black;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: red;
+  color: white;
+}
