@@ -9,7 +9,11 @@
   align-items: center;
 }
 
+.slide-maldito {
+  transition: 1s ease-in-out;
+}
 .--is-selected {
   background-color: blue;
   color: white;
 }
+

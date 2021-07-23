@@ -36,7 +36,7 @@ function renderCalendar() {
   })
 
   let indexOfDay = arrayWeek.indexOf(dayToString)
-  for (let i = 0; i <= (numberDaysMonth + indexOfDay); i++) {
+  for (let i = 0; i <= numberDaysMonth + indexOfDay; i++) {
     let cellHTML = document.createElement('span')
     if (i > indexOfDay) {
       cellHTML.textContent = i - indexOfDay
