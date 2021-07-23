@@ -7,6 +7,8 @@ let arrayWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 let today = new Date()
 let currentMonth = today.getMonth()
 let currentYear = today.getFullYear()
+let currentDay = today.getDate()
+let monthToday = today.getMonth()
 
 let month = document.createElement('span')
 let year = document.createElement('span')
@@ -38,7 +40,15 @@ function renderCalendar() {
     let cellHTML = document.createElement('span')
     if (i > indexOfDay) {
       cellHTML.textContent = i - indexOfDay
+      if((i - indexOfDay == currentDay) && currentMonth) {
+        cellHTML.classList.add('--is-selected')
+      }
+
+      if(monthToday !== currentMonth) {
+        cellHTML.classList.remove('--is-selected')
+      }
     }
+
     calendar.appendChild(cellHTML)
   }
   // console.log('current month ' + currentMonth);
@@ -64,6 +74,7 @@ function changeMonth() {
     renderCalendar()
   })
 }
+
 
 renderCalendar()
 changeMonth()
