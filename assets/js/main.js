@@ -1,4 +1,5 @@
 //** CALENDAR */
+let calendarTitle = document.getElementById('calendar-title')
 let calendar = document.getElementById('calendar')
 let arrayMonth = ['January', 'February', 'March', 'April', 'May', 'Jun', 'July', 'August', 'September', 'October', 'November', 'December']
 let arrayWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
@@ -6,6 +7,14 @@ let arrayWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 let today = new Date()
 let currentMonth = today.getMonth()
 let currentYear = today.getFullYear()
+
+let month = document.createElement('span')
+let year = document.createElement('span')
+function renderMonth() {
+  month.textContent = arrayMonth[currentMonth]
+  year.textContent = currentYear
+  calendarTitle.append(month, year)
+}
 
 function renderWeek() {
   arrayWeek.forEach(day => {
@@ -16,9 +25,10 @@ function renderWeek() {
 }
 
 function renderCalendar() {
+  renderMonth()
   renderWeek()
   let numberDaysMonth = new Date(currentYear, currentMonth, 0).getDate()
-  let firstDay = new Date(currentYear, currentMonth, 1)
+  let firstDay = new Date(currentYear, currentMonth, 0)
   let dayToString = firstDay.toLocaleDateString('en-GB', {
     weekday: 'long'
   })
@@ -41,6 +51,7 @@ function renderCalendar() {
 function changeMonth() {
   let previous = document.getElementById('previous')
   let next = document.getElementById('next')
+
   previous.addEventListener('click', () => {
     calendar.innerHTML = ''
     currentMonth--
