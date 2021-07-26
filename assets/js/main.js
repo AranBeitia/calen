@@ -25,13 +25,13 @@ function renderCalendar() {
   renderMonth()
   renderWeek()
   let numberDaysMonth = new Date(currentYear, currentMonth + 1, 0).getDate()
-  console.log(numberDaysMonth);
   let firstDay = new Date(currentYear, currentMonth, 0)
   let dayToString = firstDay.toLocaleDateString('en-GB', {
     weekday: 'long'
   })
 
   let indexOfDay = arrayWeek.indexOf(dayToString)
+
   for (let i = 0; i <= numberDaysMonth + indexOfDay; i++) {
     let cellHTML = document.createElement('span')
     if (i > indexOfDay) {
@@ -41,7 +41,7 @@ function renderCalendar() {
       }
 
       if(monthToday !== currentMonth) {
-        cellHTML.classList.remove('--is-selected')
+        cellHTML.classList.remove('--is-selected') // new Date()
       }
     }
 
