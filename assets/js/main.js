@@ -1,7 +1,6 @@
 //** CALENDAR */
 let calendarTitle = document.getElementById('calendar-title')
 let calendar = document.getElementById('calendar')
-let arrayMonth = ['January', 'February', 'March', 'April', 'May', 'Jun', 'July', 'August', 'September', 'October', 'November', 'December']
 let arrayWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 let today = new Date()
@@ -10,12 +9,8 @@ let currentYear = today.getFullYear()
 let currentDay = today.getDate()
 let monthToday = today.getMonth()
 
-let month = document.createElement('span')
-let year = document.createElement('span')
 function renderMonth() {
-  month.textContent = arrayMonth[currentMonth]
-  year.textContent = currentYear
-  calendarTitle.append(month, year)
+  calendarTitle.textContent = new Date(currentYear, currentMonth).toLocaleString('en', { month: 'long', year: 'numeric'})
 }
 
 function renderWeek() {
@@ -29,7 +24,8 @@ function renderWeek() {
 function renderCalendar() {
   renderMonth()
   renderWeek()
-  let numberDaysMonth = new Date(currentYear, currentMonth, 0).getDate()
+  let numberDaysMonth = new Date(currentYear, currentMonth + 1, 0).getDate()
+  console.log(numberDaysMonth);
   let firstDay = new Date(currentYear, currentMonth, 0)
   let dayToString = firstDay.toLocaleDateString('en-GB', {
     weekday: 'long'
@@ -51,30 +47,18 @@ function renderCalendar() {
 
     calendar.appendChild(cellHTML)
   }
-  // console.log('current month ' + currentMonth);
-  // console.log('number days current month ' + numberDaysMonth);
-  // console.log(firstDay);
-  // console.log('the first day of the current month is: ' + dayToString);
-  // console.log(indexOfDay);
 }
 
-function changeMonth() {
-  let previous = document.getElementById('previous')
-  let next = document.getElementById('next')
+let previous = document.getElementById('previous')
+let next = document.getElementById('next')
 
-  previous.addEventListener('click', () => {
-    calendar.innerHTML = ''
-    currentMonth--
-    renderCalendar()
-  })
+previous.addEventListener('click', () => changeMonth(-1))
+next.addEventListener('click', () => changeMonth(1))
 
-  next.addEventListener('click', () => {
-    calendar.innerHTML = ''
-    currentMonth++
-    renderCalendar()
-  })
+function changeMonth(value) {
+  calendar.innerHTML = ''
+  currentMonth += value
+  renderCalendar()
 }
-
 
 renderCalendar()
-changeMonth()
