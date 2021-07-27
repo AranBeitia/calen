@@ -5,6 +5,8 @@
 }
 
 body {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
+  background-color: #FCEE6D;
+  color: white;
 }

@@ -1,4 +1,30 @@
-.main-title {
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+@media all and (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* .main-title {
   font-size: 5rem;
 }
 
@@ -15,4 +41,4 @@
   .secondary-title {
     font-size: 2rem;
   }
-}
+} */

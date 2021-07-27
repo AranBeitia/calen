@@ -1,11 +1,14 @@
 .main-container {
-  outline: 1px solid red;
   max-width: 60rem;
   width: 100%;
-  margin: auto;
+  margin: 5rem auto;
+  background-color: #29323F;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px 0px rgb(41 50 63 / 75%);
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
 }

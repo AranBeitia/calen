@@ -9,11 +9,33 @@
   align-items: center;
 }
 
-.slide-maldito {
-  transition: 1s ease-in-out;
-}
-.--is-selected {
-  background-color: blue;
-  color: white;
+.flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
+.--is-selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FCEE6D;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #29323F;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.color-yellow {
+  color: #FCEE6D;
+}
+
+.color-grey {
+  color: #626972;
+}
+
+.color-grey-dark {
+  color: #29323F
+}
