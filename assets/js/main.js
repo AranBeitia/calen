@@ -1,7 +1,7 @@
 //** CALENDAR */
 let calendarTitle = document.getElementById('calendar-title')
 let calendar = document.getElementById('calendar')
-let arrayWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+let arrayWeek = ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun']
 
 let today = new Date()
 let currentMonth = today.getMonth()
@@ -16,6 +16,7 @@ function renderMonth() {
 function renderWeek() {
   arrayWeek.forEach(day => {
     let week = document.createElement('span')
+    week.classList.add('calendar__week-day')
     week.textContent += day
     calendar.appendChild(week)
   })
@@ -34,6 +35,7 @@ function renderCalendar() {
 
   for (let i = 0; i <= numberDaysMonth + indexOfDay; i++) {
     let cellHTML = document.createElement('span')
+    cellHTML.classList.add('calendar__day')
     if (i > indexOfDay) {
       cellHTML.textContent = i - indexOfDay
       if((i - indexOfDay == currentDay) && currentMonth) {
