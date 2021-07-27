@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
-  <script src="assets/js/main.js" defer></script>
+  <script type="module" src="/assets/js/main.js" defer></script>
   <title>Document</title>
 </head>
 <body>
   <div class="main-container">
     <header class="flex-between">
       <h1 class="main-title">Biutiful calendar</h1>
-      <button class="button">Add event</button>
+      <button id="create-event" class="button">Add event</button>
     </header>
     <main>
       <div class="flex-center">
@@ -25,9 +25,10 @@
       </section>
     </main>
   </div>
-  <article class="modal flex-center">
+  <article id="modal-event" class="modal flex-center">
     <div class="modal__content">
-      <p>holiiiiii mi modal chuliiii</p>
+      <button id="modal-close" class="modal__close">X</button>
+      <section id="modal-inner"></section>
     </div>
   </article>
 </body>

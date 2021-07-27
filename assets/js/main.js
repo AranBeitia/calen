@@ -1,7 +1,15 @@
+import { buildLayout, modalEventHTML, modalResumeHTML } from './modalTemplates.js'
+
+let modal = document.getElementById('modal-event')
+
 /** CALENDAR */
 let calendarTitle = document.getElementById('calendar-title')
 let calendar = document.getElementById('calendar')
 let arrayWeek = ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun']
+
+/** BUTTONS */
+document.getElementById('create-event').addEventListener('click', openModal)
+document.getElementById('modal-close').addEventListener('click', closeModal)
 
 let today = new Date()
 let currentMonth = today.getMonth()
@@ -64,3 +72,12 @@ function changeMonth(value) {
 }
 
 renderCalendar()
+
+/** MODAL */
+function openModal() {
+  buildLayout(modalEventHTML)
+  modal.classList.add('--open')
+}
+function closeModal() {
+  modal.classList.remove('--open')
+}
