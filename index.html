@@ -10,18 +10,20 @@
   <title>Document</title>
 </head>
 <body>
-  <main class="main-container">
-    <header class="flex-center">
+  <div class="main-container">
+    <header class="flex-between">
       <h1 class="main-title">Biutiful calendar</h1>
       <button class="button">Add event</button>
     </header>
-    <article>
-      <h2 id="calendar-title" class="secondary-title flex-between"></h2>
-      <button id="previous" class="button">Previous</button>
-      <button id="next" class="button">Next</button>
-      <section id="calendar" class="calendar  grid">
+    <main>
+      <div class="flex-center">
+        <button id="previous" class="button button--rounded">Prev</button>
+        <h2 id="calendar-title" class="margin-x-1 flex-between"></h2>
+        <button id="next" class="button button--rounded">Next</button>
+      </div>
+      <section id="calendar" class="calendar grid">
       </section>
-    </article>
-  </main>
+    </main>
+  </div>
 </body>
 </html>

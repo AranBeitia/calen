@@ -5,16 +5,18 @@
 .calendar__week-day {
   font-weight: 700;
   text-align: center;
-  padding: 1rem 0;
+  margin: 1rem 0;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #FCEE6D;
 }
 
 .calendar__day {
-  padding: 1rem;
+  padding: .5rem;
   text-align: center;
 }
 
-@media all and(max-width: 480px) {
+@media all and(min-width: 480px) {
   .calendar__day {
-    padding: .5rem;
+    padding: 1rem;
   }
 }

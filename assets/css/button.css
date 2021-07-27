@@ -16,3 +16,9 @@
   color: #29323F;
 }
 
+.button--rounded {
+  max-width: 3rem;
+  text-align: center;
+  padding: .5rem;
+}
+
