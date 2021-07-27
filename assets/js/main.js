@@ -1,4 +1,4 @@
-//** CALENDAR */
+/** CALENDAR */
 let calendarTitle = document.getElementById('calendar-title')
 let calendar = document.getElementById('calendar')
 let arrayWeek = ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun']
