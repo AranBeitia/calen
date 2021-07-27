@@ -21,6 +21,11 @@
 .margin-x-1 {
   margin: 0 1rem;
 }
+
+.padding-1 {
+  padding: .5rem 0;
+}
+
 /** MODIFIYERS */
 
 .--is-selected {

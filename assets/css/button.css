@@ -22,3 +22,20 @@
   padding: .5rem;
 }
 
+.button--close {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  background-color: transparent;
+  color: #29323F;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button--close:hover {
+  color: #626972;
+  font-size: 1.2rem;
+}
+

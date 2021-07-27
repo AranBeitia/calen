@@ -8,7 +8,8 @@ let calendar = document.getElementById('calendar')
 let arrayWeek = ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun']
 
 /** BUTTONS */
-document.getElementById('create-event').addEventListener('click', openModal)
+document.getElementById('create-event').addEventListener('click', openModalEvent)
+document.getElementById('boton-prueba').addEventListener('click', openModalResume)
 document.getElementById('modal-close').addEventListener('click', closeModal)
 
 let today = new Date()
@@ -74,10 +75,16 @@ function changeMonth(value) {
 renderCalendar()
 
 /** MODAL */
-function openModal() {
+function openModalEvent() {
   buildLayout(modalEventHTML)
   modal.classList.add('--open')
 }
+
+function openModalResume() {
+  buildLayout(modalResumeHTML)
+  modal.classList.add('--open')
+}
+
 function closeModal() {
   modal.classList.remove('--open')
 }
